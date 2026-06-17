@@ -2,6 +2,14 @@
 
 [MITRE ATT&CK](https://attack.mitre.org/) is a globally-used knowledge base of adversary tactics and techniques, used here to structure attack simulations the same way a real SOC documents detections and threat intelligence.
 
+## Observed Tactic Breakdown (Agent Detail View)
+
+The agent detail page aggregates MITRE tactics across **all** alerts seen for that agent in the selected time window, not just from a single attack run:
+
+![Agent detail MITRE tactics and compliance breakdown](../assets/agent-detail.jpg)
+
+In this lab's capture: `Credential Access (16)`, `Lateral Movement (6)`, `Defense Evasion (2)`, `Privilege Escalation (2)`, `Initial Access (1)`. The Credential Access / Lateral Movement counts align directly with the Hydra SSH brute-force test above. The smaller counts under other tactics weren't deliberately triggered by a specific simulation in this session — they're flagged here as an open question rather than an explained result, and are a good candidate to investigate further (e.g. by checking which specific rule IDs fired and what generated them) before claiming a specific cause.
+
 ## Techniques Simulated in This Lab
 
 ### T1595 — Active Scanning (Reconnaissance)

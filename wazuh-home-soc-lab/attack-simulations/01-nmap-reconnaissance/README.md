@@ -21,6 +21,8 @@ nmap -sV -A 192.168.1.63
 
 ## Output
 
+![Nmap scan terminal output](../../assets/nmap-scan-terminal.jpg)
+
 ```
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-06-17 14:15 -0400
 Nmap scan report for sree-pi-lab.powerhub (192.168.1.63)

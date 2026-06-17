@@ -31,6 +31,8 @@ hydra -l iam_sree -P /tmp/passlist.txt ssh://192.168.1.63 -t 4 -V
 
 ## Output
 
+![Hydra brute-force terminal output](../../assets/hydra-attack-terminal.jpg)
+
 ```
 Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak
 Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-06-17 14:21:55
@@ -52,6 +54,8 @@ All 6 attempts failed as expected — the goal of this test was detection verifi
 ## Wazuh Detection Result
 
 Both the SSH daemon and the underlying PAM authentication layer logged the failures **independently**, generating two correlated alert types per attempt:
+
+![Wazuh Discover view of the raw alerts](../../assets/alert-discover-view.jpg)
 
 ### Alert 1 — `sshd` authentication failure (rule 5760)
 ```
