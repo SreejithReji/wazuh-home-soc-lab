@@ -10,6 +10,7 @@ A fully self-built Security Operations Center lab, deployed from scratch across 
 
 - [Project Motivation](#-project-motivation)
 - [Architecture](#-architecture)
+- [Screenshots](#-screenshots)
 - [Hardware & Software Stack](#-hardware--software-stack)
 - [Build Process](#-build-process)
 - [Attack Simulations & Detection Results](#-attack-simulations--detection-results)
@@ -74,6 +75,18 @@ graph TB
 4. The Manager's rule engine analyzes and decodes the logs, generating an **alert** with MITRE ATT&CK mapping, compliance tagging (PCI DSS, HIPAA, GDPR, NIST 800-53), and severity scoring
 5. **Filebeat** ships the alert to the **Indexer** for storage
 6. The **Dashboard** queries the Indexer and renders the alert for analyst review
+
+---
+
+## 📸 Screenshots
+
+**Overview dashboard** — agents summary and 24-hour alert severity breakdown:
+
+![Wazuh dashboard overview](assets/dashboard-overview.jpg)
+
+**Agent detail view** — `sree-pi-lab` status, with MITRE ATT&CK top tactics and PCI DSS compliance breakdown generated automatically from the simulated attacks:
+
+![Agent detail with MITRE breakdown](assets/agent-detail.jpg)
 
 ---
 
